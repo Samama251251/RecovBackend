@@ -12,14 +12,13 @@ import notifcationRouter from "./routes/notificationRoutes.js";
 dotenv.config({ path: "./config.env" });
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors());
 const corsOptions = {
   origin: "*",
   credentials: true, // Allow cookies, authorization headers, etc.
 };
 
 // app.use(cors(corsOptions));
-app.use(cors());
+app.use(cors(corsOptions));
 mongoose
   .connect(process.env.DB, {
     useNewUrlParser: true,
