@@ -14,7 +14,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors());
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "*",
   credentials: true, // Allow cookies, authorization headers, etc.
 };
 
